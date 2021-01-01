@@ -1,0 +1,88 @@
+<!-- db.html
+     Ajer Lodhi
+     03/13/2020
+     Use a form to collect a query against the Video Game Industry
+     database.
+     Call the PHP script, movie.php to perform
+     the given query and display the results
+    -->
+<html>
+<head><title> Access to the movie database </title>
+</head>
+<body>
+<center>
+<font size="10">VIDEO GAME DATABASE APPLICATION</font>
+<p>
+----------------
+LIST TABLES
+----------------
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/listTables.php" method = "post">
+  <button type = "listTables"  value = "ListTables">List Tables</button>
+</form>
+</p>
+<p>
+--------------
+DISPLAY TABLES
+-------------
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/VGD.php" method = "post">
+  <button type = "videoGameDevelopers"  value = "VideoGameDevelopers">VideoGameDevelopers</button>
+</form>
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/Customers.php" method = "post">
+  <button type = "customers"  value = "Customers">Customers</button>
+</form>
+</p>
+<p>
+---------
+DISPLAY AGGREGATES
+----------
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/AggVGD.php" method = "post">
+<button type = "videoGameDevelopers"  value = "VideoGameDevelopers">VideoGameDevelopers</button>
+</form>
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/AggCustomers.php" method = "post">
+  <button type = "customers"  value = "Customers">Customers</button>
+</form>
+</p>
+<p>
+<p>
+----------------
+JOIN TABLES
+-----------------
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/join_VGP_VG.php" method = "post">
+  <button type = "join"  value = "Join">Join</button>
+</form>
+</p>
+<p>
+------------
+INSERT DEVELOPER
+-----------
+</p>
+
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/insertVGD.php" method = "post">
+<p> Dname:
+<input type="text" name = "D_name" value = ""/>
+</p>
+<p> GameHistory:
+<input type="number" name = "G_History" value = ""/>
+</p>
+<p>
+   <input type = "submit" name = "submit" value = "Insert" />
+</p>
+</form>
+
+<p>
+----------------------------------------------------</br>
+Please enter your query:
+<br />
+
+<form action  = "http://css1.seattleu.edu/~lodhia/dbtest/db.php" method = "post">
+
+    <textarea  rows = "5"  cols = "40" name = "query" ></textarea>
+    <br /><br />
+    <input type = "reset"  value = "Reset" />
+    <input type = "submit"  value = "Submit request" />
+</form>    
+</p>
+</center>
+</body>
+</html>
+
